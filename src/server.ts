@@ -12,6 +12,13 @@ server.use(cors()); //modo wildcard
 
 // server.use("/src", routes)
 
+const customMorgan =
+    ':remote-addr - :remote-user [:date] ":method :url HTTP/:http-version" :status :res[content-length]';
+
+server.use(
+    morgan(process.env.NODE_ENV === "development" ? "dev" : customMorgan)
+);
+
 //luego cuando conecta con la db colocar async/await
 function startServer() {
     server.listen(process.env.PORT, () => {
