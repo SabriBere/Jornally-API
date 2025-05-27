@@ -1,34 +1,39 @@
 {
-  "engines": {
-    "node": ">=20.6.0"
-  },
-  "name": "jornally-api",
-  "version": "0.1.0",
-  "description": "",
-  "main": "server.ts",
-  "scripts": {
-    "dev": "node --env-file=.env.dev --watch --watch-preserve-output -r ts-node/register src/server.ts",
-    "build": "tsc",
-    "production": "node --env-file=.env.production dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Sabrina Demetrio",
-  "license": "MIT",
-  "dependencies": {
-    "@prisma/client": "^6.8.2",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.18",
-    "@types/express": "^5.0.2",
-    "@types/node": "^22.15.21",
-    "eslint-config-prettier": "^10.1.5",
-    "eslit": "^6.0.0",
-    "prettier": "^3.5.3",
-    "prisma": "^6.8.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  }
+    "engines": {
+        "node": ">=20.6.0"
+    },
+    "name": "jornally-api",
+    "version": "0.1.0",
+    "description": "",
+    "main": "server.ts",
+    "scripts": {
+        "dev": "node --env-file=.env.dev --watch --watch-preserve-output -r ts-node/register src/server.ts",
+        "production": "node --env-file=.env.production dist/server.js",
+        "lint": "eslint .",
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Sabrina Demetrio",
+    "license": "MIT",
+    "dependencies": {
+        "@prisma/client": "^6.8.2",
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.27.0",
+        "@types/cors": "^2.8.18",
+        "@types/express": "^5.0.2",
+        "@types/node": "^22.15.21",
+        "@typescript-eslint/eslint-plugin": "^8.33.0",
+        "@typescript-eslint/parser": "^8.33.0",
+        "eslint": "^9.27.0",
+        "eslint-config-prettier": "^10.1.5",
+        "globals": "^16.2.0",
+        "prettier": "^3.5.3",
+        "prisma": "^6.8.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3"
+    }
 }
