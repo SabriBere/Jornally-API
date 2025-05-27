@@ -12,12 +12,11 @@ server.use(cors()) //modo wildcard
 
 // server.use("/src", routes)
 
-const port = 8000
 async function startServer(){
-    server.listen(port, () => {
-        console.log("Server running on port:", port)
+    server.listen(process.env.PORT, () => {
+        console.log("Server running on port:", process.env.PORT)
         console.log("API version:", process.env.npm_package_version)
-        console.log("🌐 Entorno:", 'ninguno de momento');
+        console.log("Entorno:", process.env.NODE_ENV);
     })
 }
 
