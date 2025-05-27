@@ -4,7 +4,6 @@ import morgan from "morgan";
 //llamado a las rutas
 //llamado a swagger para documetación de end points
 //middleware para cuando no encuentra una ruta
-//configurar morgan para más info
 
 const server = express();
 server.use(express.json());
